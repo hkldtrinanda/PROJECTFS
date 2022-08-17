@@ -10,10 +10,7 @@ public class GrabItem : MonoBehaviour
 
     public float rayDist;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
 
     // Update is called once per frame
     void Update()
@@ -22,7 +19,7 @@ public class GrabItem : MonoBehaviour
 
         if (grabCheck.collider != null && grabCheck.collider.tag == "Grabable")
         {
-            if (Input.GetKey(KeyCode.F))
+            if (Input.GetKey(KeyCode.G))
             {
                 grabCheck.collider.gameObject.transform.parent = boxHolder;
                 grabCheck.collider.gameObject.transform.position = boxHolder.position;
