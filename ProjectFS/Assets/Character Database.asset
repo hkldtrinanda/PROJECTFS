@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5976c04c7ff9198419aa631210cb30bb, type: 3}
+  m_Name: Character Database
+  m_EditorClassIdentifier: 
+  character:
+  - characterName: SOP Level 1
+    characterSprite: {fileID: 21300000, guid: e895083cdcee7604e9ca2ffc1917ac77, type: 3}
+    sopDigunakan: 1
+  - characterName: SOP Level 2
+    characterSprite: {fileID: 21300000, guid: f30ce11b5419b3444a546b1486234c05, type: 3}
+    sopDigunakan: 2
+  - characterName: SOP Level 3
+    characterSprite: {fileID: 21300000, guid: 87e0752dd51ba894ea9bb5b2426efc04, type: 3}
+    sopDigunakan: 3
+  - characterName: SOP Level 4
+    characterSprite: {fileID: 21300000, guid: 5d9709e8bdf869c4182dac1915c71599, type: 3}
+    sopDigunakan: 4
+  - characterName: SOP Level 5
+    characterSprite: {fileID: 21300000, guid: 5186054d2f82b5e479373f107899e542, type: 3}
+    sopDigunakan: 5
