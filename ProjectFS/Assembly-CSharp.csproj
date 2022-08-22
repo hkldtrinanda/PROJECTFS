@@ -64,6 +64,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\BulletScript.cs" />
+    <Compile Include="Assets\Player_Attack.cs" />
     <Compile Include="Assets\Script\ActivateCameraAR.cs" />
     <Compile Include="Assets\Script\ButtonLampScripting.cs" />
     <Compile Include="Assets\Script\ButtonScripting.cs" />

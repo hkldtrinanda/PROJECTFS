@@ -4,33 +4,49 @@ using UnityEngine;
 
 public class GrabItem : MonoBehaviour
 {
-    public Transform grabDetect;
 
-    public Transform boxHolder;
+    GameObject holdedItem;
+    Transform tempItemPosition;
+    bool holdingItem;
+    public Transform objectPosition;
 
-    public float rayDist;
-    // Start is called before the first frame update
 
-
-    // Update is called once per frame
-    void Update()
+    
+    private void OnTriggerStay2D(Collider2D other)
     {
-        RaycastHit2D grabCheck = Physics2D.Raycast(grabDetect.position, Vector2.right * transform.localScale, rayDist);
-
-        if (grabCheck.collider != null && grabCheck.collider.tag == "Grabable")
+        if (other.gameObject.tag == "Grabable")
         {
-            if (Input.GetKey(KeyCode.G))
+            if (Input.GetButtonDown("Fire2"))
             {
-                grabCheck.collider.gameObject.transform.parent = boxHolder;
-                grabCheck.collider.gameObject.transform.position = boxHolder.position;
-                grabCheck.collider.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
+                if (holdingItem)
+                {
+                    releaseItem();
+                }
+                holdingItem = true;
+                holdedItem = other.gameObject;
+                tempItemPosition = holdedItem.transform;
+                grabItem();
             }
-            else
-            {
-                grabCheck.collider.gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
-                grabCheck.collider.gameObject.transform.parent = null;
-            }
+                
+          
         }
-  
     }
+
+    void grabItem()
+    {
+        holdedItem.transform.position = objectPosition.position;
+        holdedItem.transform.localScale = transform.localScale;
+        holdedItem.transform.parent = transform;
+        holdedItem.GetComponent<BoxCollider2D>().enabled = false;
+    }
+
+    void releaseItem()
+    {
+        holdedItem.GetComponent<BoxCollider2D>().enabled = true;
+        holdedItem.transform.parent = null;
+        holdedItem.transform.position = tempItemPosition.position;
+        holdingItem = false;
+     
+    }
+   
 }

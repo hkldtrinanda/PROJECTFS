@@ -58,6 +58,9 @@ public class WalkingSimulator : MonoBehaviour
     private void Flip()
     {
         facingRight = !facingRight;
-        transform.Rotate(Vector3.up * 180);
+       
+        Vector3 localScale = transform.localScale;
+        localScale.x *= -1f;
+        transform.localScale = localScale;
     }
 }
