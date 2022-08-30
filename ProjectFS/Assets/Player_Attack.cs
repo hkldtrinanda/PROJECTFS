@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class Player_Attack : MonoBehaviour
 {
+
+    public static Player_Attack instance;
+    public bool canShoot;
     [SerializeField] Transform firePoint;
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] float lastShootTime, fireRate;
+    
 
+    private void Awake()
+    {
+        instance = this;
+    }
     private void Update()
     {
-        if (!Input.GetButtonDown("Fire1"))
-            return;
-        Shoot();
+        if (Input.GetButtonDown("Fire1") && canShoot)
+        {
+            Shoot();
+        }
+      
+    
     }
 
     void Shoot()

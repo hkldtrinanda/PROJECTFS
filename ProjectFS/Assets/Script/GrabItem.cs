@@ -10,13 +10,11 @@ public class GrabItem : MonoBehaviour
     bool holdingItem;
     public Transform objectPosition;
 
-
-    
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.tag == "Grabable")
         {
-            if (Input.GetButtonDown("Fire2"))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 if (holdingItem)
                 {
@@ -38,6 +36,8 @@ public class GrabItem : MonoBehaviour
         holdedItem.transform.localScale = transform.localScale;
         holdedItem.transform.parent = transform;
         holdedItem.GetComponent<BoxCollider2D>().enabled = false;
+  
+        Player_Attack.instance.canShoot = true;
     }
 
     void releaseItem()
@@ -46,7 +46,8 @@ public class GrabItem : MonoBehaviour
         holdedItem.transform.parent = null;
         holdedItem.transform.position = tempItemPosition.position;
         holdingItem = false;
-     
+        Player_Attack.instance.canShoot = false;
+
     }
    
 }

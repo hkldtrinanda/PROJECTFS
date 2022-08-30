@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class CharacterManager : MonoBehaviour
@@ -7,12 +8,13 @@ public class CharacterManager : MonoBehaviour
     public CharachterDataBase charachterDB;
     public SpriteRenderer theSR;
     public sop_panel sopPanel;
+    public Button playButton;
 
     private int selectedOption;
 
     private void Start()
     {
-      
+        playButton.interactable = false;
         UpdateCharacter(selectedOption);
     }
 
@@ -31,7 +33,12 @@ public class CharacterManager : MonoBehaviour
         {
             sopPanel.transform.GetChild(i).transform.GetChild(3).gameObject.SetActive(true);
         }
-      
+        
+        if(character == charachterDB.GetCharacter(5))
+        {
+            playButton.interactable = true;
+        }
+
 
 
     }

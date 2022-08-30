@@ -16,5 +16,10 @@ public class BulletScript : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (other.tag == "Target")
+        {
+            Destroy(gameObject);
+            other.gameObject.SetActive(false);
+        }
     }
 }

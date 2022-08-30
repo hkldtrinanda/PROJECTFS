@@ -13,18 +13,21 @@ MonoBehaviour:
   m_Name: Character Database
   m_EditorClassIdentifier: 
   character:
+  - characterName: SOP Level 0
+    characterSprite: {fileID: 21300000, guid: 833785e2415b53f4cb30c495136f78ec, type: 3}
+    sopDigunakan: 0
   - characterName: SOP Level 1
-    characterSprite: {fileID: 21300000, guid: e895083cdcee7604e9ca2ffc1917ac77, type: 3}
+    characterSprite: {fileID: 21300000, guid: 847e9ca511fd38c4dac8c73d1f1ba1e1, type: 3}
     sopDigunakan: 1
   - characterName: SOP Level 2
-    characterSprite: {fileID: 21300000, guid: f30ce11b5419b3444a546b1486234c05, type: 3}
+    characterSprite: {fileID: 21300000, guid: 11bedfaaa23c02941b196d6254a820ff, type: 3}
     sopDigunakan: 2
   - characterName: SOP Level 3
-    characterSprite: {fileID: 21300000, guid: 87e0752dd51ba894ea9bb5b2426efc04, type: 3}
+    characterSprite: {fileID: 21300000, guid: 8af97f4ec721a7042a231cac83b096d1, type: 3}
     sopDigunakan: 3
   - characterName: SOP Level 4
-    characterSprite: {fileID: 21300000, guid: 5d9709e8bdf869c4182dac1915c71599, type: 3}
+    characterSprite: {fileID: 21300000, guid: a6b9d0841b48d0f43a6232c17f3b7faf, type: 3}
     sopDigunakan: 4
   - characterName: SOP Level 5
-    characterSprite: {fileID: 21300000, guid: 5186054d2f82b5e479373f107899e542, type: 3}
+    characterSprite: {fileID: 21300000, guid: d8a5c5de57902124d8353fceff9212b8, type: 3}
     sopDigunakan: 5
