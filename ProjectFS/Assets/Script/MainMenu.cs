@@ -23,8 +23,11 @@ public class MainMenu : MonoBehaviour
       Creditpanel.SetActive(true);
   }
 
-  public void closeCredit()
+  public void Update()
   {
-      Creditpanel.SetActive(false);
+      if(Input.GetKeyDown(KeyCode.Escape))
+      {
+          Creditpanel.SetActive(false);
+      }
   }
 }
