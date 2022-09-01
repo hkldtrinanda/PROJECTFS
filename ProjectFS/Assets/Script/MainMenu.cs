@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
     
   public string scene;
   public GameObject Creditpanel;
+  public GameObject PausePanel;
     
   public void playGame ()
     {
@@ -21,6 +22,7 @@ public class MainMenu : MonoBehaviour
   public void creditScene()
   {
       Creditpanel.SetActive(true);
+      PausePanel.SetActive(false);
   }
 
   public void Update()

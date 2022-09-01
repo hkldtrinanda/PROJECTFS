@@ -8,6 +8,10 @@ public class PauseScripting : MonoBehaviour
     public GameObject PauseON;
     public GameObject PauseOFF;
     
+    [Header("PanelOpsi")]
+    public GameObject PanelOpsii;
+    
+    
     [Header("AnimasiSlider")]
     public Animator SliderAnim;
     // Start is called before the first frame update
@@ -47,5 +51,16 @@ public class PauseScripting : MonoBehaviour
             }
         }
 
+    }
+    
+    public void PanelOpsi()
+    {
+        PanelOpsii.SetActive(true);
+        PauseON.SetActive(false);
+    }
+    public void PanelOpsiOff()
+    {
+        PanelOpsii.SetActive(false);
+        PauseON.SetActive(true);
     }
 }
