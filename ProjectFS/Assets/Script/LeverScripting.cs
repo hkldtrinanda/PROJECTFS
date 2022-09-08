@@ -9,7 +9,8 @@ public class LeverScripting : MonoBehaviour
     public Animator animMesin;
 
     [Header("Spawner")] 
-    public GameObject objectSpawn;
+    public GameObject[] objectSpawn;
+    public float timeBetweenSpawn = 5;
     
     [Header("Panel Lever")]
     public GameObject panelLever;
@@ -25,19 +26,18 @@ public class LeverScripting : MonoBehaviour
     {
         animMesin.GetComponent<Animator>();
         
-        objectSpawn.SetActive(false);
+        objectSpawn[0].SetActive(false);
         
-        StartCoroutine(WaitBeforeShow());
     }
 
     // Start is called before the first frame update
     public void PanelOns()
     {
         animMesin.SetBool("MesinOn", true);
-        
+
         //waitasecond
-        
-        objectSpawn.SetActive(true);
+
+        SpawnObject();
         
         //panel
         panelLever.SetActive(false);
@@ -56,14 +56,28 @@ public class LeverScripting : MonoBehaviour
         Enginestart.Stop();
         
     }
-    
-    private IEnumerator WaitBeforeShow()
+
+    void SpawnObject()
     {
+        StartCoroutine(WaitBeforeShow());
+    }
+    
+    IEnumerator WaitBeforeShow()
+    {
+        while (true)
+        {
+            for (int i = 0; i < objectSpawn.Length; i++)
+            {
+                Debug.Log("Spawning Object " + i);
+                yield return new WaitForSeconds(timeBetweenSpawn);
+                objectSpawn[i].SetActive(true);
+                Debug.Log("Succesfuly Spawn Object " + i);
+
+            }
+        }
+       
         
-        yield return new WaitForSeconds(10
-        );
-        objectSpawn.SetActive(true);
-        lampuAlarm.SetActive(true);
-        
+      
+       
     }
 }
