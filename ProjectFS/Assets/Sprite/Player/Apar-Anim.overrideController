@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Apar-Anim
+  m_Controller: {fileID: 9100000, guid: 1b5e4d4c05b012540804b618d39c5311, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 9180e3afb8eb1a243be8a129c16f0c9a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 9180e3afb8eb1a243be8a129c16f0c9a, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: a9eadcd316696614ab5f0b66839ec154, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a9eadcd316696614ab5f0b66839ec154, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 9c8532fb852607d42b79d1fe7f8b7e39, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 9180e3afb8eb1a243be8a129c16f0c9a, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 9278a394beb55e64e984bc5a67ab3751, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a9eadcd316696614ab5f0b66839ec154, type: 2}

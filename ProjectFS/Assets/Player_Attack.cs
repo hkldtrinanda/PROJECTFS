@@ -6,19 +6,21 @@ public class Player_Attack : MonoBehaviour
 {
 
     public static Player_Attack instance;
-    public bool canShoot;
-    [SerializeField] Transform firePoint;
+    public bool canShoot, cooldownEnd;
+    public float shootCooldown = 1f;
+    [SerializeField] Transform smoke;
     [SerializeField] GameObject bulletPrefab;
-    [SerializeField] float lastShootTime, fireRate;
+  
     
 
     private void Awake()
     {
         instance = this;
+        cooldownEnd = true;
     }
-    private void Update()
+    private void FixedUpdate()
     {
-        if (Input.GetButtonDown("Fire1") && canShoot)
+        if (Input.GetButtonDown("Fire1") && canShoot && cooldownEnd)
         {
             Shoot();
         }
@@ -28,12 +30,18 @@ public class Player_Attack : MonoBehaviour
 
     void Shoot()
     {
-        if (Time.time > lastShootTime + fireRate)
-        {
-            GameObject NewBullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-            NewBullet.SetActive(true);
-            NewBullet.transform.localScale = transform.localScale;
-        }
+
+        smoke.gameObject.SetActive(true);
+            StartCoroutine(ShootCooldown());
+
+     
       
+    }
+
+    IEnumerator ShootCooldown()
+    {
+        cooldownEnd = false;
+        yield return new WaitForSeconds(shootCooldown);
+        cooldownEnd = true;
     }
 }

@@ -9,6 +9,14 @@ public class GrabItem : MonoBehaviour
     Transform tempItemPosition;
     bool holdingItem;
     public Transform objectPosition;
+    public AnimatorOverrideController animAPAR;
+    public RuntimeAnimatorController defaultAnim;
+    public Animator anim;
+
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     private void OnTriggerStay2D(Collider2D other)
     {
@@ -32,8 +40,10 @@ public class GrabItem : MonoBehaviour
 
     void grabItem()
     {
+        anim.runtimeAnimatorController = animAPAR as RuntimeAnimatorController;
         holdedItem.transform.position = objectPosition.position;
         holdedItem.transform.localScale = transform.localScale;
+        holdedItem.SetActive(false);
         holdedItem.transform.parent = transform;
         holdedItem.GetComponent<BoxCollider2D>().enabled = false;
   
@@ -42,6 +52,8 @@ public class GrabItem : MonoBehaviour
 
     void releaseItem()
     {
+        holdedItem.SetActive(true);
+        anim.runtimeAnimatorController = defaultAnim as RuntimeAnimatorController;
         holdedItem.GetComponent<BoxCollider2D>().enabled = true;
         holdedItem.transform.parent = null;
         holdedItem.transform.position = tempItemPosition.position;

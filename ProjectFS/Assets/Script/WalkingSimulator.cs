@@ -6,6 +6,7 @@ public class WalkingSimulator : MonoBehaviour
     public float MovementSpeed = 5;
     public float JumpForce = 7;
     public bool facingRight = true;
+    public Animator anim;
     /*public Animator animator;*/
     
 
@@ -20,7 +21,8 @@ public class WalkingSimulator : MonoBehaviour
     {
         // KODE MOVEMENT
         var movement = Input.GetAxis("Horizontal");
-        transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * MovementSpeed;
+        _rigidbody.velocity = new Vector2(Input.GetAxis("Horizontal") * MovementSpeed, _rigidbody.velocity.y);
+        anim.SetFloat("moveSpeed", Mathf.Abs(_rigidbody.velocity.x));
         // KODE FLIP MOVEMENT
         if (movement < 0 && facingRight) Flip();
         if (movement > 0 && !facingRight) Flip();

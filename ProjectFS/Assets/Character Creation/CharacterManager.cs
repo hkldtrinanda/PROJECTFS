@@ -9,6 +9,7 @@ public class CharacterManager : MonoBehaviour
     public SpriteRenderer theSR;
     public sop_panel sopPanel;
     public Button playButton;
+    public Animator canvasAnim;
 
     private int selectedOption;
 
@@ -33,10 +34,14 @@ public class CharacterManager : MonoBehaviour
         {
             sopPanel.transform.GetChild(i).transform.GetChild(3).gameObject.SetActive(true);
         }
-        
-        if(character == charachterDB.GetCharacter(5))
+
+        if (character == charachterDB.GetCharacter(5))
         {
             playButton.interactable = true;
+        }
+        else if (character != charachterDB.GetCharacter(5))
+        {
+            playButton.interactable = false; 
         }
 
 

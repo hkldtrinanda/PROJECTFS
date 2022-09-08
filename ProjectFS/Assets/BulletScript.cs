@@ -8,18 +8,19 @@ public class BulletScript : MonoBehaviour
 
     void Update()
     {
-        transform.position += new Vector3(speed * transform.localScale.x * Time.deltaTime, 0f, 0f);
+        
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Boundary")
-        {
-            Destroy(gameObject);
-        }
+        
         if (other.tag == "Target")
         {
-            Destroy(gameObject);
+            
             other.gameObject.SetActive(false);
         }
+    }
+    void destroySelf()
+    {
+        gameObject.SetActive(false);
     }
 }
