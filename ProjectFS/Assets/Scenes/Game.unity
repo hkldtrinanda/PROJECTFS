@@ -17854,7 +17854,7 @@ MonoBehaviour:
   - {fileID: 1906265690}
   - {fileID: 1273204501}
   - {fileID: 1151553311}
-  timeBetweenSpawn: 5
+  timeBetweenSpawn: 3
   panelLever: {fileID: 1427625977}
   lampuAlarm: {fileID: 1152712756}
   Enginestart: {fileID: 1950906511}

@@ -64,8 +64,7 @@ public class LeverScripting : MonoBehaviour
     
     IEnumerator WaitBeforeShow()
     {
-        while (true)
-        {
+        
             for (int i = 0; i < objectSpawn.Length; i++)
             {
                 Debug.Log("Spawning Object " + i);
@@ -74,8 +73,7 @@ public class LeverScripting : MonoBehaviour
                 Debug.Log("Succesfuly Spawn Object " + i);
 
             }
-        }
-       
+        
         
       
        
