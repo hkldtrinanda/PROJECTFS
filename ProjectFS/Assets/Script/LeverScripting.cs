@@ -20,6 +20,7 @@ public class LeverScripting : MonoBehaviour
 
     [Header("Audio Mesin")] 
     public AudioSource Enginestart;
+    public GameObject Engineaudio;
 
 
     public void Start()
@@ -44,6 +45,7 @@ public class LeverScripting : MonoBehaviour
         
         //audio
         Enginestart.Play();
+        Engineaudio.SetActive(true);
         
         //lampualarm
         lampuAlarm.SetActive(true);
@@ -53,7 +55,7 @@ public class LeverScripting : MonoBehaviour
     public void PanelOffs()
     {
         animMesin.SetBool("MesinOn", false);
-        Enginestart.Stop();
+        /*Enginestart.Stop();*/
         
     }
 
@@ -73,9 +75,8 @@ public class LeverScripting : MonoBehaviour
                 Debug.Log("Succesfuly Spawn Object " + i);
 
             }
-        
-        
-      
-       
+            
+            
+
     }
 }

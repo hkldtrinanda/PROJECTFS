@@ -9,6 +9,7 @@ public class ButtonLampScripting : MonoBehaviour
     public GameObject PanelOn;
     public GameObject PanelOff;
     public GameObject LampOn;
+    public AudioSource SpringSound;
 
     [Header("Acc Lampu")] public GameObject AccLampu;
     
@@ -25,6 +26,7 @@ public class ButtonLampScripting : MonoBehaviour
         PanelCanvas.SetActive(false);
         LampOn.SetActive(true);
         AccLampu.SetActive(true);
+        SpringSound.Play();
     }
 
     // Update is called once per frame
@@ -34,6 +36,7 @@ public class ButtonLampScripting : MonoBehaviour
         LampOn.SetActive(false);
         AccLampu.SetActive(false);
         MesinAnim.SetBool("MesinOn", false);
+        SpringSound.Play();
     }
 
     private void Start()

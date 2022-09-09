@@ -8,6 +8,7 @@ public class PopUpNotes : MonoBehaviour
 {
     [Header("Panel Open/Close")]
     [SerializeField] public GameObject imageNote;
+    
     [Header("Interaksi Button")]
     [SerializeField] public GameObject interactUI;
 

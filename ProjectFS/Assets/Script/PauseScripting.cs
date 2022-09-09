@@ -6,7 +6,9 @@ public class PauseScripting : MonoBehaviour
 {
     [Header("On/Off")] 
     public GameObject PauseON;
+    public AudioSource PauseSoundOn;
     public GameObject PauseOFF;
+
     
     [Header("PanelOpsi")]
     public GameObject PanelOpsii;
@@ -22,6 +24,8 @@ public class PauseScripting : MonoBehaviour
         PauseON.SetActive(true);
         
         PauseOFF.SetActive(false);
+        PauseSoundOn.Play();
+
         
     }
 
@@ -31,6 +35,8 @@ public class PauseScripting : MonoBehaviour
         SliderAnim.SetBool("SliderDown", true);
         PauseOFF.SetActive(true);
         PauseON.SetActive(false);
+        PauseSoundOn.Play();
+  
     }
 
     public void Update()
