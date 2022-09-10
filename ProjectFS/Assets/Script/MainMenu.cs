@@ -21,15 +21,21 @@ public class MainMenu : MonoBehaviour
 
   public void creditScene()
   {
-      Creditpanel.SetActive(true);
+      PausePanel.SetActive(true);
+      Creditpanel.SetActive(false);
+  }
+  
+  public void PauseScene()
+  {
       PausePanel.SetActive(false);
+      Creditpanel.SetActive(true);
   }
 
   public void Update()
   {
       if(Input.GetKeyDown(KeyCode.Escape))
       {
-          Creditpanel.SetActive(false);
+         PausePanel.SetActive(false);
       }
   }
 }
