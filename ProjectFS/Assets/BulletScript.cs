@@ -4,19 +4,15 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
-    public float speed;
 
-    void Update()
-    {
-        
-    }
+    public int damage;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         
         if (other.tag == "Target")
         {
-            
-            other.gameObject.SetActive(false);
+            other.GetComponent<flameScript>().TakeDamage(damage);
         }
     }
     void destroySelf()

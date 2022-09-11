@@ -5,23 +5,34 @@ using UnityEngine;
 
 public class LeverScripting : MonoBehaviour
 {
+
+    public static LeverScripting instance;
     [Header("Menyalakan Mesin")] 
     public Animator animMesin;
 
     [Header("Spawner")] 
     public GameObject[] objectSpawn;
+    public int jumlahApiPadam;
     public float timeBetweenSpawn = 5;
-    
+    public float emergencyWaitTime = 10f;
+
     [Header("Panel Lever")]
     public GameObject panelLever;
     
     [Header("Lampu Alarm")]
     public GameObject lampuAlarm;
+    public GameObject lampuUtama;
+    public GameObject SmokeScreen;
+    public BoxCollider2D exitDoor;
 
     [Header("Audio Mesin")] 
     public AudioSource Enginestart;
     public GameObject Engineaudio;
 
+    private void Awake()
+    {
+        instance = this;
+    }
 
     public void Start()
     {
@@ -29,6 +40,15 @@ public class LeverScripting : MonoBehaviour
         
         objectSpawn[0].SetActive(false);
         
+    }
+
+    private void Update()
+    {
+        if (jumlahApiPadam != objectSpawn.Length)
+            return;
+        SmokeScreen.SetActive(true);
+        exitDoor.isTrigger = true;
+
     }
 
     // Start is called before the first frame update
@@ -48,7 +68,7 @@ public class LeverScripting : MonoBehaviour
         Engineaudio.SetActive(true);
         
         //lampualarm
-        lampuAlarm.SetActive(true);
+       
     }
 
     // Update is called once per frame
@@ -66,17 +86,16 @@ public class LeverScripting : MonoBehaviour
     
     IEnumerator WaitBeforeShow()
     {
-        
-            for (int i = 0; i < objectSpawn.Length; i++)
-            {
-                Debug.Log("Spawning Object " + i);
-                yield return new WaitForSeconds(timeBetweenSpawn);
-                objectSpawn[i].SetActive(true);
-                Debug.Log("Succesfuly Spawn Object " + i);
+        yield return new WaitForSeconds(emergencyWaitTime);
+        lampuAlarm.SetActive(true);
+        lampuUtama.SetActive(false);
+        for (int i = 0; i < objectSpawn.Length; i++)
+        {
+            Debug.Log("Spawning Object " + i);
+            objectSpawn[i].SetActive(true);
+            yield return new WaitForSeconds(timeBetweenSpawn);
+            Debug.Log("Succesfuly Spawn Object " + i);
 
-            }
-            
-            
-
+        }
     }
 }
