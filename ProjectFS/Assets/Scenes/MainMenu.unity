@@ -1461,7 +1461,7 @@ PrefabInstance:
     - target: {fileID: 6724696332965334568, guid: 915a028d8ae3d4848b36de69ea9a4674,
         type: 3}
       propertyPath: scene
-      value: CharacterCreation
+      value: Edu
       objectReference: {fileID: 0}
     - target: {fileID: 6724696332965334568, guid: 915a028d8ae3d4848b36de69ea9a4674,
         type: 3}
