@@ -22,6 +22,7 @@ public class ButtonLampScripting : MonoBehaviour
     // Start is called before the first frame update
     public void PanelOns()
     {
+        ToDoManager.instance.updateUI();
         PanelOn.SetActive(true);
         PanelCanvas.SetActive(false);
         LampOn.SetActive(true);

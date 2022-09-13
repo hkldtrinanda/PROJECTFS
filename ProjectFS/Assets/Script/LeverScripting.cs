@@ -54,6 +54,7 @@ public class LeverScripting : MonoBehaviour
     // Start is called before the first frame update
     public void PanelOns()
     {
+        ToDoManager.instance.updateUI();
         animMesin.SetBool("MesinOn", true);
 
         //waitasecond

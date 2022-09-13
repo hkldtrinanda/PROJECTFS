@@ -697,16 +697,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SopLists:
-  - sopName: 'Memakai Seragam '
-    score: 100
-  - sopName: Menggunakan Masker
-    score: 100
-  - sopName: Memakai Sepatu
-    score: 100
-  - sopName: Memakai Sarung Tangan
-    score: 100
-  - sopName: Memakai Kacamata & Earplug
-    score: 100
+  - sopName: A
+    score: 0
+  - sopName: B
+    score: 0
+  - sopName: C
+    score: 0
+  - sopName: D
+    score: 0
+  - sopName: E
+    score: 0
 --- !u!114 &445051487
 MonoBehaviour:
   m_ObjectHideFlags: 0

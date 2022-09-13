@@ -21,6 +21,7 @@ public class flameScript : MonoBehaviour
             Destroy(gameObject);
             LeverScripting.instance.jumlahApiPadam += 1;
             ScoreManager.instance.AddScore(score);
+            ToDoManager.instance.updateUI();
         }
     }
 
