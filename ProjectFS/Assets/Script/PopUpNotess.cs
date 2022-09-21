@@ -25,6 +25,14 @@ public class PopUpNotess : MonoBehaviour
     {
         /*gameManager = FindObjectOfType<GameManager2>();*/
     }
+    
+    public void CloseNote()
+    {
+        imageNote.SetActive(false);
+        panelNote.SetActive(false);
+        interactUI.SetActive(true);
+        noteSound.Play();
+    }
 
     // Update is called once per frame
     void Update()

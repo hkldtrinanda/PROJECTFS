@@ -8,6 +8,12 @@ public class AudioManager : MonoBehaviour
     
 
     [SerializeField] Slider volumeSlider;
+    
+    [Header("Panel On")]
+    public GameObject panelOn;
+    
+    [Header("Panel Off")]
+    public GameObject panelOff;
     // Start is called before the first frame update
     void Start()
     {

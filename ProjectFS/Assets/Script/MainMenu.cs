@@ -9,11 +9,17 @@ public class MainMenu : MonoBehaviour
   public string scene;
   public GameObject Creditpanel;
   public GameObject PausePanel;
+
+
     
   public void playGame ()
     {
-      SceneManager.LoadScene(scene);
+        
+        SceneManager.LoadScene(scene);
+      
     }
+  
+
   public void QuitGame()
       {
           Application.Quit();

@@ -11,6 +11,8 @@ public class PopUpNotes : MonoBehaviour
     
     [Header("Interaksi Button")]
     [SerializeField] public GameObject interactUI;
+    
+    
 
 
 
@@ -23,6 +25,11 @@ public class PopUpNotes : MonoBehaviour
         /*gameManager = FindObjectOfType<GameManager2>();*/
     }
 
+    public void CloseNote()
+    {
+        imageNote.SetActive(false);
+        interactUI.SetActive(true);
+    }
     // Update is called once per frame
     void Update()
     {

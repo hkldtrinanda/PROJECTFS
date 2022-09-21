@@ -28,6 +28,9 @@ public class LeverScripting : MonoBehaviour
     [Header("Audio Mesin")] 
     public AudioSource Enginestart;
     public GameObject Engineaudio;
+    
+    [Header("ColliderDimatikan")]
+    public Collider2D[] colliderDimatikan;
 
     private void Awake()
     {
@@ -69,6 +72,12 @@ public class LeverScripting : MonoBehaviour
         Engineaudio.SetActive(true);
         
         //lampualarm
+        
+        //Collider
+        foreach (var collider in colliderDimatikan)
+        {
+            collider.enabled = false;
+        }
        
     }
 
