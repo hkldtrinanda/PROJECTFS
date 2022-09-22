@@ -52,11 +52,11 @@ public class CharacterManager : MonoBehaviour
         sopBoxReset();
         sopCheck(character);
 
-        if (character == charachterDB.GetCharacter(5))
+        if (character.isPlayable == true)
         {
             playButton.interactable = true;
         }
-        else if (character != charachterDB.GetCharacter(5))
+        else if (character.isPlayable == false)
         {
             playButton.interactable = false;
         }

@@ -16,6 +16,8 @@ public class Character
 
     public bool[] sopTerpakai;
 
+    public bool isPlayable;
+
     
 }
 
