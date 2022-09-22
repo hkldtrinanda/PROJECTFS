@@ -13,5 +13,9 @@ public class Character
     public Sprite characterSprite;
 
     public int sopDigunakan;
+
+    public bool[] sopTerpakai;
+
+    
 }
 

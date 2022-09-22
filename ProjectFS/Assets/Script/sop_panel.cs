@@ -6,18 +6,22 @@ using UnityEngine;
 
 public class sop_panel : MonoBehaviour
 {
-   [Serializable]
+    public bool doneCalculate;
+    [Serializable]
    public struct SopList
     {
         public string sopName;
         public int score;
+
     }
 
     [SerializeField] public SopList[] SopLists;
     private void Awake()
     {
+       
         GameObject buttonTemplate = transform.GetChild(0).gameObject;
         GameObject g;
+       
 
         int N = SopLists.Length;
         for (int i = 0; i < N; i++)
@@ -28,6 +32,7 @@ public class sop_panel : MonoBehaviour
 
         }
         Destroy(buttonTemplate);
+        doneCalculate = true;
     }
 
 }

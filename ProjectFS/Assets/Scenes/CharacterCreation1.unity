@@ -174,6 +174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: Game
   Creditpanel: {fileID: 0}
+  PausePanel: {fileID: 0}
 --- !u!1 &106778490
 GameObject:
   m_ObjectHideFlags: 0
@@ -9570,6 +9571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3a529fd23c76874c8e444be3a85a460, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doneCalculate: 0
   SopLists:
   - sopName: 'Memakai Seragam '
     score: 100
@@ -10090,10 +10092,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db483f225014c4469fd42ee09cf5400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  charachterDB: {fileID: 11400000, guid: 472d478fa16a49b40b7df284abb07d0f, type: 2}
+  charachterDB: {fileID: 11400000, guid: 531db65ca66103e4aa6ee63f91715087, type: 2}
+  tempCharacterDB: {fileID: 11400000, guid: 5e7ee0a3884465b469291357f10cd945, type: 2}
   theSR: {fileID: 1787387561}
   sopPanel: {fileID: 989009027}
   playButton: {fileID: 1834184597}
+  canvasAnim: {fileID: 0}
+  sopBoxes:
+  - {fileID: 1104508728}
+  - {fileID: 1104508728}
+  - {fileID: 1104508728}
+  - {fileID: 1104508728}
+  - {fileID: 1104508728}
+  doRandom: 1
+  randomCharFrom: 5
 --- !u!212 &1787387561
 SpriteRenderer:
   m_ObjectHideFlags: 0

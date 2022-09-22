@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5976c04c7ff9198419aa631210cb30bb, type: 3}
+  m_Name: Temp Character Database
+  m_EditorClassIdentifier: 
+  character:
+  - characterName: Level 0
+    characterSprite: {fileID: 21300000, guid: 833785e2415b53f4cb30c495136f78ec, type: 3}
+    sopDigunakan: 5
+    sopTerpakai: 0000000000
+  - characterName: Level 1
+    characterSprite: {fileID: 21300000, guid: 847e9ca511fd38c4dac8c73d1f1ba1e1, type: 3}
+    sopDigunakan: 5
+    sopTerpakai: 0100000000
+  - characterName: Level 2
+    characterSprite: {fileID: 21300000, guid: 11bedfaaa23c02941b196d6254a820ff, type: 3}
+    sopDigunakan: 5
+    sopTerpakai: 0101000000
+  - characterName: Level 3
+    characterSprite: {fileID: 21300000, guid: 8af97f4ec721a7042a231cac83b096d1, type: 3}
+    sopDigunakan: 5
+    sopTerpakai: 0101010000
+  - characterName: Level 4
+    characterSprite: {fileID: 21300000, guid: a6b9d0841b48d0f43a6232c17f3b7faf, type: 3}
+    sopDigunakan: 3
+    sopTerpakai: 0101010100
+  - characterName: Level 5
+    characterSprite: {fileID: 21300000, guid: d8a5c5de57902124d8353fceff9212b8, type: 3}
+    sopDigunakan: 4
+    sopTerpakai: 0101010101
+  - characterName: Random 1
+    characterSprite: {fileID: 21300000, guid: 9652e48a8cf59bf418df87191abaad0a, type: 3}
+    sopDigunakan: 0
+    sopTerpakai: 0001010001
+  - characterName: Random 2
+    characterSprite: {fileID: 21300000, guid: 1b932f38a7c670e40a07a10c5e49ca1d, type: 3}
+    sopDigunakan: 1
+    sopTerpakai: 0100000100
+  - characterName: Random 3
+    characterSprite: {fileID: 21300000, guid: f2f19a619bc95a645936d73fd9ce68f3, type: 3}
+    sopDigunakan: 5
+    sopTerpakai: 0101010001
+  - characterName: Random 4
+    characterSprite: {fileID: 21300000, guid: 8f5c16bb29afb454697e7a0eadddc3e0, type: 3}
+    sopDigunakan: 2
+    sopTerpakai: 0001000101
