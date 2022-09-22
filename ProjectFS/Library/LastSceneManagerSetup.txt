@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/CharacterCreation1.unity
+- path: Assets/Scenes/Edu.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
