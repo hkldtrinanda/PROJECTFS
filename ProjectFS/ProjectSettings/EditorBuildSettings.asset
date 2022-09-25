@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CharacterCreation1.unity
     guid: 9b274810d14a9864885f9e225bca9ae6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/CharacterCreation.unity
     guid: 8401726897edf3e48abf9e178e4c8da6
   - enabled: 1
